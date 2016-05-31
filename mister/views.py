@@ -6,6 +6,6 @@ def index(request):
 	data = Collector.objects.all()
 	return render(request, 'index.html', {'data': data,})
 
-def collector_detail(request, slug):
-	data = Collector.objects.get(slug=slug)
-	return render(request, 'data/collector_detail.html', {'data': data,})
+# def collector_detail(request, slug):
+# 	data = Collector.objects.get(slug=slug)
+# 	return render(request, 'data/collector_detail.html', {'data': data,})

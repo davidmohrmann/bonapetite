@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			{% block title %}
+				Bona Petite Project
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		{% block header %}{% endblock %}
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li>
+						<a href="{% url 'index' %}">Home</a>
+					</li>
+					<li>
+						<a href="{% url 'about' %}">About</a>
+					</li>
+					<li>
+						<a href="{% url 'contact' %}">Contact</a>
+					</li>	
+					<li>
+						<a href="{% url 'plantinfo' %}">Plant Info</a>
+					</li>
+				</ul>
+			</nav>		
+		</header>
+	{% block content %}{% endblock %}
+	{% block footer %}{% endblock %}
+	</body>
+</html>
+

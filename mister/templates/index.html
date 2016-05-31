@@ -1,13 +1,6 @@
-<!doctype html>
-<html>
-	<head>
-		<title> Bona Petite Project </title>
-	</head>
-	<body>
+{% extends 'layouts/base.html' %}
+{% block title %}Homepage - {{ block.super }}{% endblock %}
+{% block content %}
 		<h1> Welcome to Bona Petite! </h1>
 		<p> The Future of Hydroponic Farms is here! </p>
-		{% for collector in data %}
-		<h1>Collection Instance: {{collector.id}}, Instance's Ph Level: {{collector.ph_level}}, Time Collected: {{collector.time_collected}} <h1>
-		{% endfor %}
-	</body>
-</html>
+{% endblock %}
