@@ -3,8 +3,11 @@ from django.http import HttpResponse
 from mister.models import Collector
 
 def index(request):
-	data = Collector.objects.all()
-	return render(request, 'index.html', {'data': data,})
+	return render(request, 'index.html')
+
+def cool(request):
+	data=Collector.objects.all()
+	return render(request, 'plantinfo.html', {'data': data,})
 
 # def collector_detail(request, slug):
 # 	data = Collector.objects.get(slug=slug)

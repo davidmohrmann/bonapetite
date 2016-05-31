@@ -1,7 +1,9 @@
 {% extends 'layouts/base.html' %}
 {% block title %}Plant Info - {{ block.super }}{% endblock %}
 {% block content %}
-		This is where the database would be to access the realtime data. Must be linked via views. See below!
+{% for collector in data %}
+<h1>Collection Instance: {{collector.id}}, Instance's Ph Level: {{collector.ph_level}}, Time Collected: {{collector.time_collected}} <h1>
+{% endfor %}
 {% endblock %}
 
 
