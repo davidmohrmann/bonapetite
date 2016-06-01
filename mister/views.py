@@ -5,10 +5,11 @@ from mister.models import Collector
 def index(request):
 	return render(request, 'index.html')
 
-def cool(request):
-	data=Collector.objects.all()
+def collection(request):
+	data=Collector.objects.all().order_by('-time_collected')
 	return render(request, 'plantinfo.html', {'data': data,})
 
-# def collector_detail(request, slug):
-# 	data = Collector.objects.get(slug=slug)
-# 	return render(request, 'data/collector_detail.html', {'data': data,})
+# def instance_detail(request, id):
+# 	instance=Collector.objects.get(id=id)
+# 	return render(request, 'instance_detail.html', {'instance': instance,})	
+# 	pass
